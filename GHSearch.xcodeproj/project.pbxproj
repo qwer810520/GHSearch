@@ -13,6 +13,14 @@
 		391535F126A94330009535DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391535EF26A94330009535DC /* LaunchScreen.storyboard */; };
 		391535FC26A94330009535DC /* GHSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391535FB26A94330009535DC /* GHSearchTests.swift */; };
 		3915360726A94330009535DC /* GHSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915360626A94330009535DC /* GHSearchUITests.swift */; };
+		3915362226A94AE1009535DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915362126A94AE1009535DC /* MainViewController.swift */; };
+		397C43DB26A94F30003EECB2 /* SearchUserResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43DA26A94F30003EECB2 /* SearchUserResultView.swift */; };
+		397C43DD26A9551A003EECB2 /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */; };
+		397C43DF26A95553003EECB2 /* UICollectionReusableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43DE26A95553003EECB2 /* UICollectionReusableView+Ex.swift */; };
+		397C43E226A9557F003EECB2 /* UserResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43E126A9557F003EECB2 /* UserResultCell.swift */; };
+		397C43E726A957F1003EECB2 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43E626A957F1003EECB2 /* UIView+Ex.swift */; };
+		397C43EB26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */; };
+		397C449926A95ED3003EECB2 /* InputSearchKeyWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C449826A95ED3003EECB2 /* InputSearchKeyWordView.swift */; };
 		3BBF554BDE0BB7112809C726 /* Pods_GHSearch_GHSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F67C26DA133E4F038CFB9A3 /* Pods_GHSearch_GHSearchUITests.framework */; };
 		74C268215FB12E45FD1F656C /* Pods_GHSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F52A9A137EF4132DC30444 /* Pods_GHSearch.framework */; };
 		DDDF013E62F76FB3D8D58DA9 /* Pods_GHSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA95904BA4D40943945F3CEA /* Pods_GHSearchTests.framework */; };
@@ -49,6 +57,14 @@
 		3915360226A94330009535DC /* GHSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3915360626A94330009535DC /* GHSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSearchUITests.swift; sourceTree = "<group>"; };
 		3915360826A94330009535DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3915362126A94AE1009535DC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		397C43DA26A94F30003EECB2 /* SearchUserResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultView.swift; sourceTree = "<group>"; };
+		397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ex.swift"; sourceTree = "<group>"; };
+		397C43DE26A95553003EECB2 /* UICollectionReusableView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+Ex.swift"; sourceTree = "<group>"; };
+		397C43E126A9557F003EECB2 /* UserResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultCell.swift; sourceTree = "<group>"; };
+		397C43E626A957F1003EECB2 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		397C449826A95ED3003EECB2 /* InputSearchKeyWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSearchKeyWordView.swift; sourceTree = "<group>"; };
 		3F67C26DA133E4F038CFB9A3 /* Pods_GHSearch_GHSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHSearch_GHSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E1ABD841FF50995A246012 /* Pods-GHSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-GHSearchTests/Pods-GHSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		485AB5F784003471C7F0E9DB /* Pods-GHSearch-GHSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHSearch-GHSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-GHSearch-GHSearchUITests/Pods-GHSearch-GHSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +153,10 @@
 			children = (
 				391535E426A9432A009535DC /* AppDelegate.swift */,
 				391535E626A9432A009535DC /* SceneDelegate.swift */,
+				397C43E826A9589B003EECB2 /* Helper */,
+				3915362026A94ABF009535DC /* Models */,
+				3915361E26A94AAB009535DC /* Views */,
+				3915361D26A94AA3009535DC /* ViewControllers */,
 				391535ED26A94330009535DC /* Assets.xcassets */,
 				391535EF26A94330009535DC /* LaunchScreen.storyboard */,
 				391535F226A94330009535DC /* Info.plist */,
@@ -160,6 +180,66 @@
 				3915360826A94330009535DC /* Info.plist */,
 			);
 			path = GHSearchUITests;
+			sourceTree = "<group>";
+		};
+		3915361D26A94AA3009535DC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3915362126A94AE1009535DC /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3915361E26A94AAB009535DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				397C43E026A95575003EECB2 /* Cells */,
+				397C43DA26A94F30003EECB2 /* SearchUserResultView.swift */,
+				397C449826A95ED3003EECB2 /* InputSearchKeyWordView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3915361F26A94AB9009535DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */,
+				397C43DE26A95553003EECB2 /* UICollectionReusableView+Ex.swift */,
+				397C43E626A957F1003EECB2 /* UIView+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3915362026A94ABF009535DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		397C43E026A95575003EECB2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				397C43E126A9557F003EECB2 /* UserResultCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		397C43E826A9589B003EECB2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3915361F26A94AB9009535DC /* Extensions */,
+				397C43E926A958A0003EECB2 /* Parent */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		397C43E926A958A0003EECB2 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */,
+			);
+			path = Parent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +498,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397C43DB26A94F30003EECB2 /* SearchUserResultView.swift in Sources */,
+				3915362226A94AE1009535DC /* MainViewController.swift in Sources */,
+				397C43DD26A9551A003EECB2 /* UICollectionView+Ex.swift in Sources */,
 				391535E526A9432A009535DC /* AppDelegate.swift in Sources */,
+				397C43EB26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift in Sources */,
+				397C43DF26A95553003EECB2 /* UICollectionReusableView+Ex.swift in Sources */,
 				391535E726A9432A009535DC /* SceneDelegate.swift in Sources */,
+				397C449926A95ED3003EECB2 /* InputSearchKeyWordView.swift in Sources */,
+				397C43E226A9557F003EECB2 /* UserResultCell.swift in Sources */,
+				397C43E726A957F1003EECB2 /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
