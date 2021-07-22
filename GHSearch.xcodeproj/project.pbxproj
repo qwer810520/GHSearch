@@ -11,8 +11,6 @@
 		391535E726A9432A009535DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391535E626A9432A009535DC /* SceneDelegate.swift */; };
 		391535EE26A94330009535DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391535ED26A94330009535DC /* Assets.xcassets */; };
 		391535F126A94330009535DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391535EF26A94330009535DC /* LaunchScreen.storyboard */; };
-		391535FC26A94330009535DC /* GHSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391535FB26A94330009535DC /* GHSearchTests.swift */; };
-		3915360726A94330009535DC /* GHSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915360626A94330009535DC /* GHSearchUITests.swift */; };
 		3915362226A94AE1009535DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3915362126A94AE1009535DC /* MainViewController.swift */; };
 		397C43DB26A94F30003EECB2 /* SearchUserResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43DA26A94F30003EECB2 /* SearchUserResultView.swift */; };
 		397C43DD26A9551A003EECB2 /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */; };
@@ -21,20 +19,21 @@
 		397C43E726A957F1003EECB2 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43E626A957F1003EECB2 /* UIView+Ex.swift */; };
 		397C43EB26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */; };
 		397C449926A95ED3003EECB2 /* InputSearchKeyWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C449826A95ED3003EECB2 /* InputSearchKeyWordView.swift */; };
-		3BBF554BDE0BB7112809C726 /* Pods_GHSearch_GHSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F67C26DA133E4F038CFB9A3 /* Pods_GHSearch_GHSearchUITests.framework */; };
+		397C44A126A96BF5003EECB2 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44A026A96BF5003EECB2 /* UIImageView+Ex.swift */; };
+		397C44A626A96F00003EECB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44A526A96F00003EECB2 /* APIClient.swift */; };
+		397C44A826A9733F003EECB2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44A726A9733F003EECB2 /* APIManager.swift */; };
+		397C44AA26A977DC003EECB2 /* SearchParametersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44A926A977DC003EECB2 /* SearchParametersInfo.swift */; };
+		397C44AC26A98A1D003EECB2 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44AB26A98A1D003EECB2 /* String+Ex.swift */; };
+		397C44AE26A98CE2003EECB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44AD26A98CE1003EECB2 /* User.swift */; };
+		397C44B026A98E30003EECB2 /* SearchUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44AF26A98E30003EECB2 /* SearchUserResult.swift */; };
+		397C44B326A99184003EECB2 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C44B226A99184003EECB2 /* ModelTests.swift */; };
+		397C44B526A991F0003EECB2 /* ModelDecodeSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 397C44B426A991F0003EECB2 /* ModelDecodeSample.json */; };
 		74C268215FB12E45FD1F656C /* Pods_GHSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F52A9A137EF4132DC30444 /* Pods_GHSearch.framework */; };
 		DDDF013E62F76FB3D8D58DA9 /* Pods_GHSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA95904BA4D40943945F3CEA /* Pods_GHSearchTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		391535F826A94330009535DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 391535D926A94329009535DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 391535E026A9432A009535DC;
-			remoteInfo = GHSearch;
-		};
-		3915360326A94330009535DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 391535D926A94329009535DC /* Project object */;
 			proxyType = 1;
@@ -52,11 +51,7 @@
 		391535F026A94330009535DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		391535F226A94330009535DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391535F726A94330009535DC /* GHSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		391535FB26A94330009535DC /* GHSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSearchTests.swift; sourceTree = "<group>"; };
 		391535FD26A94330009535DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3915360226A94330009535DC /* GHSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3915360626A94330009535DC /* GHSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSearchUITests.swift; sourceTree = "<group>"; };
-		3915360826A94330009535DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3915362126A94AE1009535DC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		397C43DA26A94F30003EECB2 /* SearchUserResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResultView.swift; sourceTree = "<group>"; };
 		397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ex.swift"; sourceTree = "<group>"; };
@@ -65,6 +60,15 @@
 		397C43E626A957F1003EECB2 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		397C449826A95ED3003EECB2 /* InputSearchKeyWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSearchKeyWordView.swift; sourceTree = "<group>"; };
+		397C44A026A96BF5003EECB2 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
+		397C44A526A96F00003EECB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		397C44A726A9733F003EECB2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		397C44A926A977DC003EECB2 /* SearchParametersInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParametersInfo.swift; sourceTree = "<group>"; };
+		397C44AB26A98A1D003EECB2 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		397C44AD26A98CE1003EECB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		397C44AF26A98E30003EECB2 /* SearchUserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResult.swift; sourceTree = "<group>"; };
+		397C44B226A99184003EECB2 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		397C44B426A991F0003EECB2 /* ModelDecodeSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ModelDecodeSample.json; sourceTree = "<group>"; };
 		3F67C26DA133E4F038CFB9A3 /* Pods_GHSearch_GHSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHSearch_GHSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E1ABD841FF50995A246012 /* Pods-GHSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-GHSearchTests/Pods-GHSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		485AB5F784003471C7F0E9DB /* Pods-GHSearch-GHSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHSearch-GHSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-GHSearch-GHSearchUITests/Pods-GHSearch-GHSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,14 +93,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDF013E62F76FB3D8D58DA9 /* Pods_GHSearchTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		391535FF26A94330009535DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BBF554BDE0BB7112809C726 /* Pods_GHSearch_GHSearchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +127,6 @@
 			children = (
 				391535E326A9432A009535DC /* GHSearch */,
 				391535FA26A94330009535DC /* GHSearchTests */,
-				3915360526A94330009535DC /* GHSearchUITests */,
 				391535E226A9432A009535DC /* Products */,
 				030E1D2AD4E08179208EEA96 /* Pods */,
 				1EC3948F368D3B04DE091A26 /* Frameworks */,
@@ -143,7 +138,6 @@
 			children = (
 				391535E126A9432A009535DC /* GHSearch.app */,
 				391535F726A94330009535DC /* GHSearchTests.xctest */,
-				3915360226A94330009535DC /* GHSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +148,7 @@
 				391535E426A9432A009535DC /* AppDelegate.swift */,
 				391535E626A9432A009535DC /* SceneDelegate.swift */,
 				397C43E826A9589B003EECB2 /* Helper */,
+				397C44A426A96EC4003EECB2 /* Managers */,
 				3915362026A94ABF009535DC /* Models */,
 				3915361E26A94AAB009535DC /* Views */,
 				3915361D26A94AA3009535DC /* ViewControllers */,
@@ -167,19 +162,11 @@
 		391535FA26A94330009535DC /* GHSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				391535FB26A94330009535DC /* GHSearchTests.swift */,
 				391535FD26A94330009535DC /* Info.plist */,
+				397C44B226A99184003EECB2 /* ModelTests.swift */,
+				397C44B426A991F0003EECB2 /* ModelDecodeSample.json */,
 			);
 			path = GHSearchTests;
-			sourceTree = "<group>";
-		};
-		3915360526A94330009535DC /* GHSearchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3915360626A94330009535DC /* GHSearchUITests.swift */,
-				3915360826A94330009535DC /* Info.plist */,
-			);
-			path = GHSearchUITests;
 			sourceTree = "<group>";
 		};
 		3915361D26A94AA3009535DC /* ViewControllers */ = {
@@ -206,6 +193,8 @@
 				397C43DC26A9551A003EECB2 /* UICollectionView+Ex.swift */,
 				397C43DE26A95553003EECB2 /* UICollectionReusableView+Ex.swift */,
 				397C43E626A957F1003EECB2 /* UIView+Ex.swift */,
+				397C44A026A96BF5003EECB2 /* UIImageView+Ex.swift */,
+				397C44AB26A98A1D003EECB2 /* String+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +202,7 @@
 		3915362026A94ABF009535DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				397C44B126A99071003EECB2 /* DataModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +230,25 @@
 				397C43EA26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift */,
 			);
 			path = Parent;
+			sourceTree = "<group>";
+		};
+		397C44A426A96EC4003EECB2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				397C44A526A96F00003EECB2 /* APIClient.swift */,
+				397C44A726A9733F003EECB2 /* APIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		397C44B126A99071003EECB2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				397C44A926A977DC003EECB2 /* SearchParametersInfo.swift */,
+				397C44AD26A98CE1003EECB2 /* User.swift */,
+				397C44AF26A98E30003EECB2 /* SearchUserResult.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,26 +293,6 @@
 			productReference = 391535F726A94330009535DC /* GHSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3915360126A94330009535DC /* GHSearchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3915361126A94330009535DC /* Build configuration list for PBXNativeTarget "GHSearchUITests" */;
-			buildPhases = (
-				13713D4AE7A6B3AC63D8E85B /* [CP] Check Pods Manifest.lock */,
-				391535FE26A94330009535DC /* Sources */,
-				391535FF26A94330009535DC /* Frameworks */,
-				3915360026A94330009535DC /* Resources */,
-				70A0F351A8E38BAA32267FEB /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3915360426A94330009535DC /* PBXTargetDependency */,
-			);
-			name = GHSearchUITests;
-			productName = GHSearchUITests;
-			productReference = 3915360226A94330009535DC /* GHSearchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,10 +306,6 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					391535F626A94330009535DC = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = 391535E026A9432A009535DC;
-					};
-					3915360126A94330009535DC = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 391535E026A9432A009535DC;
 					};
@@ -341,7 +326,6 @@
 			targets = (
 				391535E026A9432A009535DC /* GHSearch */,
 				391535F626A94330009535DC /* GHSearchTests */,
-				3915360126A94330009535DC /* GHSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,41 +344,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3915360026A94330009535DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				397C44B526A991F0003EECB2 /* ModelDecodeSample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13713D4AE7A6B3AC63D8E85B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GHSearch-GHSearchUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1C3BFC9ED8A30515CDC23860 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,23 +390,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-		70A0F351A8E38BAA32267FEB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GHSearch-GHSearchUITests/Pods-GHSearch-GHSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GHSearch-GHSearchUITests/Pods-GHSearch-GHSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GHSearch-GHSearchUITests/Pods-GHSearch-GHSearchUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		72308760197C66E495BFD1A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -499,15 +438,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				397C43DB26A94F30003EECB2 /* SearchUserResultView.swift in Sources */,
+				397C44AA26A977DC003EECB2 /* SearchParametersInfo.swift in Sources */,
 				3915362226A94AE1009535DC /* MainViewController.swift in Sources */,
 				397C43DD26A9551A003EECB2 /* UICollectionView+Ex.swift in Sources */,
+				397C44AE26A98CE2003EECB2 /* User.swift in Sources */,
 				391535E526A9432A009535DC /* AppDelegate.swift in Sources */,
+				397C44A126A96BF5003EECB2 /* UIImageView+Ex.swift in Sources */,
+				397C44AC26A98A1D003EECB2 /* String+Ex.swift in Sources */,
 				397C43EB26A958B8003EECB2 /* ParentCollectionViewFlowLayout.swift in Sources */,
 				397C43DF26A95553003EECB2 /* UICollectionReusableView+Ex.swift in Sources */,
 				391535E726A9432A009535DC /* SceneDelegate.swift in Sources */,
 				397C449926A95ED3003EECB2 /* InputSearchKeyWordView.swift in Sources */,
 				397C43E226A9557F003EECB2 /* UserResultCell.swift in Sources */,
+				397C44B026A98E30003EECB2 /* SearchUserResult.swift in Sources */,
+				397C44A826A9733F003EECB2 /* APIManager.swift in Sources */,
 				397C43E726A957F1003EECB2 /* UIView+Ex.swift in Sources */,
+				397C44A626A96F00003EECB2 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,15 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391535FC26A94330009535DC /* GHSearchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		391535FE26A94330009535DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3915360726A94330009535DC /* GHSearchUITests.swift in Sources */,
+				397C44B326A99184003EECB2 /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +472,6 @@
 			isa = PBXTargetDependency;
 			target = 391535E026A9432A009535DC /* GHSearch */;
 			targetProxy = 391535F826A94330009535DC /* PBXContainerItemProxy */;
-		};
-		3915360426A94330009535DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 391535E026A9432A009535DC /* GHSearch */;
-			targetProxy = 3915360326A94330009535DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -687,7 +620,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.min.GHSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,7 +641,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.min.GHSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -758,48 +691,6 @@
 			};
 			name = Release;
 		};
-		3915361226A94330009535DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95E7329D4F43A355BBFFCF36 /* Pods-GHSearch-GHSearchUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WCFPRNZ278;
-				INFOPLIST_FILE = GHSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.min.GHSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GHSearch;
-			};
-			name = Debug;
-		};
-		3915361326A94330009535DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 485AB5F784003471C7F0E9DB /* Pods-GHSearch-GHSearchUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WCFPRNZ278;
-				INFOPLIST_FILE = GHSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.min.GHSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GHSearch;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -826,15 +717,6 @@
 			buildConfigurations = (
 				3915360F26A94330009535DC /* Debug */,
 				3915361026A94330009535DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3915361126A94330009535DC /* Build configuration list for PBXNativeTarget "GHSearchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3915361226A94330009535DC /* Debug */,
-				3915361326A94330009535DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

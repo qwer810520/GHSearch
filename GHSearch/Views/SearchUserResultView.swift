@@ -38,12 +38,16 @@ class SearchUserResultView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setupLayout()
+  }
+
   // MARK: - Private Methods
 
   private func setupUserInterface() {
     translatesAutoresizingMaskIntoConstraints = false
     addSubviews([searchResultView, inputKeywordView])
-    setupLayout()
   }
 
   private func setupLayout() {

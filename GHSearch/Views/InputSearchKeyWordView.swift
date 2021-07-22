@@ -37,12 +37,16 @@ class InputSearchKeyWordView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setupLayout()
+  }
+
   // MARK: - Private Methods
 
   private func setupUserInterface() {
     translatesAutoresizingMaskIntoConstraints = false
     addSubview(inputTextField)
-    setupLayout()
   }
 
   private func setupLayout() {
