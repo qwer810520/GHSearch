@@ -9,7 +9,7 @@ import UIKit
 
 protocol SearchUserResultViewDelegate: class {
   func searchUsers(with keyword: String)
-  func preFetchNextPage()
+  func prefetchNextPage()
   func dismissKeyboard()
 }
 
@@ -107,7 +107,7 @@ extension SearchUserResultView: UICollectionViewDelegateFlowLayout {
     let usersCount = userList.count
     DispatchQueue.global().async { [weak self] in
       guard indexPath.item > usersCount - 2 else { return }
-      self?.delegate?.preFetchNextPage()
+      self?.delegate?.prefetchNextPage()
     }
   }
 }

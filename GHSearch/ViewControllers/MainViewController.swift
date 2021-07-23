@@ -71,7 +71,7 @@ extension MainViewController: SearchUserResultViewDelegate {
     viewModel?.searchUser(with: keyword)
   }
 
-  func preFetchNextPage() {
+  func prefetchNextPage() {
     viewModel?.fetchNextPage()
   }
 }
