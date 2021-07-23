@@ -20,8 +20,7 @@ class SearchUserResultView: UIView {
   }()
 
   private lazy var flowLayout: ParentCollectionViewFlowLayout = {
-    let layout = ParentCollectionViewFlowLayout(itemSize: .init(width: UIScreen.main.bounds.width, height: 70))
-    return layout
+    return ParentCollectionViewFlowLayout()
   }()
 
   private lazy var searchResultView: UICollectionView = {
@@ -59,6 +58,10 @@ class SearchUserResultView: UIView {
     searchResultView.reloadData()
   }
 
+  func updateCellLayout() {
+    searchResultView.collectionViewLayout.invalidateLayout()
+  }
+
   // MARK: - Private Methods
 
   private func setupUserInterface() {
@@ -91,7 +94,11 @@ class SearchUserResultView: UIView {
 
   // MARK: - UICollectionViewDelegate
 
-extension SearchUserResultView: UICollectionViewDelegate {
+extension SearchUserResultView: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return .init(width: UIScreen.main.bounds.width, height: 70)
+  }
+
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     delegate?.dismissKeyboard()
   }

@@ -24,6 +24,11 @@ class MainViewController: UIViewController {
     binded()
   }
 
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    resultView.updateCellLayout()
+  }
+
   // MARK: - Private Methods
 
   private func setupUserInterface() {

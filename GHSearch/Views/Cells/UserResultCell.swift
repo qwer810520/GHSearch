@@ -57,11 +57,15 @@ class UserResultCell: UICollectionViewCell {
     userPhotoImageView.image = nil
   }
 
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setupLayout()
+  }
+
   // MARK: - Private Methods
 
   private func setupUserInterface() {
     contentView.addSubviews([userPhotoImageView, bottomSeparateLine, userNameLabel])
-    setupLayout()
   }
 
   private func setupLayout() {
