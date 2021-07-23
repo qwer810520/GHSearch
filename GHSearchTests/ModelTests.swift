@@ -11,21 +11,21 @@ import XCTest
 class ModelTests: XCTestCase {
 
   func test_modelDecode() {
-    let decodeSample = try? readFile()
+    let jsonFile = try? readFile()
+    let headerSample = ["Link": "<https://api.github.com/search/users?q=Apple&per_page=20&page=2>; rel=\"next\", <https://api.github.com/search/users?q=Apple&per_page=20&page=50>; rel=\"last\""]
 
-    guard let dataSample = decodeSample else {
-      XCTFail("fetch test sample fild Failure")
+    guard let dataSample = jsonFile else {
+      XCTFail("fetch test sample file Failure")
       return
     }
 
-    let decoder = JSONDecoder()
-    let model = try? decoder.decode(SearchUserResult.self, from: dataSample)
+    let model = SearchUserResponse(header: headerSample, data: dataSample)
 
-    XCTAssertNotNil(model, "decoder model failure")
-    XCTAssertEqual(model?.totalCount, 1)
-    XCTAssertEqual(model?.items.count, 1)
-    XCTAssertEqual(model?.items[0].login, "apple")
-    XCTAssertEqual(model?.items[0].avatarUrl, "https://avatars.githubusercontent.com/u/10639145?v=4")
+    XCTAssertEqual(model.items.count, 1)
+    XCTAssertEqual(model.items[0].login, "apple")
+    XCTAssertEqual(model.items[0].avatarUrl, "https://avatars.githubusercontent.com/u/10639145?v=4")
+    XCTAssertEqual(model.nextPageParmeter, "q=Apple&per_page=20&page=2")
+    XCTAssertEqual(model.lastPageParmeter, "q=Apple&per_page=20&page=50")
   }
 
   // MARK: - Helper

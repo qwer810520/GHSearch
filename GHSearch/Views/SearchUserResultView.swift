@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol SearchUserResultViewDelegate: class {
+  func searchUsers(with keyword: String)
+  func preFetchNextPage()
+  func dismissKeyboard()
+}
+
 class SearchUserResultView: UIView {
 
   private lazy var inputKeywordView: InputSearchKeyWordView = {
@@ -24,12 +30,17 @@ class SearchUserResultView: UIView {
     view.backgroundColor = .white
     view.register(with: [UserResultCell.self])
     view.dataSource = self
+    view.delegate = self
     return view
   }()
 
+  private var userList: [User] = []
+  weak var delegate: SearchUserResultViewDelegate?
+
   // MARK: - Initialization
 
-  init() {
+  init(delegate: SearchUserResultViewDelegate? = nil) {
+    self.delegate = delegate
     super.init(frame: .zero)
     setupUserInterface()
   }
@@ -41,6 +52,11 @@ class SearchUserResultView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     setupLayout()
+  }
+
+  func setupUI(with users: [User]) {
+    userList = users
+    searchResultView.reloadData()
   }
 
   // MARK: - Private Methods
@@ -73,15 +89,32 @@ class SearchUserResultView: UIView {
   }
 }
 
+  // MARK: - UICollectionViewDelegate
+
+extension SearchUserResultView: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    delegate?.dismissKeyboard()
+  }
+
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    let usersCount = userList.count
+    DispatchQueue.global().async { [weak self] in
+      guard indexPath.item > usersCount - 2 else { return }
+      self?.delegate?.preFetchNextPage()
+    }
+  }
+}
+
   // MARK: - UICollectionViewDataSource
 
 extension SearchUserResultView: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return userList.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(with: UserResultCell.self, for: indexPath)
+    cell.user = userList[indexPath.item]
     return cell
   }
 }
@@ -90,6 +123,6 @@ extension SearchUserResultView: UICollectionViewDataSource {
 
 extension SearchUserResultView: InputSearchKeyWordDelegate {
   func searchButtonDidPressed(with Keyword: String) {
-    print("search keyword: \(Keyword)")
+    delegate?.searchUsers(with: Keyword)
   }
 }

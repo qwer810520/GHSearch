@@ -8,7 +8,7 @@
 import Foundation
 
 enum APIManager {
-  case searchUser(SearchParametersInfo)
+  case searchUser(String)
 }
 
   // MARK: - TargetType
@@ -20,8 +20,8 @@ extension APIManager: TargetType {
 
   var path: String {
     switch self {
-      case let .searchUser(info):
-        return "?q=\(info.keywordURLEncoded)&per_page=\(info.perPageCount)&page=\(info.page)"
+      case let .searchUser(parameter):
+        return "?\(parameter)"
     }
   }
 

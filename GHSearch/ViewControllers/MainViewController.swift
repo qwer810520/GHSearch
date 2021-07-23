@@ -9,34 +9,64 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-  private lazy var baseView: SearchUserResultView = {
-    let view = SearchUserResultView()
-    return view
+  private lazy var resultView: SearchUserResultView = {
+    return SearchUserResultView(delegate: self)
   }()
+
+  private var viewModel: SearchUserViewModel?
+
+  // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    viewModel = SearchUserViewModel()
     setupUserInterface()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+    binded()
   }
 
   // MARK: - Private Methods
 
   private func setupUserInterface() {
-    view.addSubview(baseView)
+    view.addSubview(resultView)
+    view.backgroundColor = .white
     title = "Search"
     setupLayout()
   }
 
   private func setupLayout() {
     NSLayoutConstraint.activate([
-      baseView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 0),
-      baseView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      baseView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      baseView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.bottomAnchor, multiplier: 0)
+      resultView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 0),
+      resultView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      resultView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      resultView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.bottomAnchor, multiplier: 0)
     ])
+  }
+
+  private func binded() {
+    viewModel?.userList = { [weak self] users in
+      self?.resultView.setupUI(with: users)
+      self?.title = "Search"
+    }
+
+    viewModel?.requestError = { [weak self] errorMessage in
+      print(errorMessage)
+      self?.title = errorMessage
+    }
+  }
+}
+
+  // MARK: - SearchUserResultViewDelegate
+
+extension MainViewController: SearchUserResultViewDelegate {
+  func dismissKeyboard() {
+    view.endEditing(true)
+  }
+
+  func searchUsers(with keyword: String) {
+    viewModel?.searchUser(with: keyword)
+  }
+
+  func preFetchNextPage() {
+    viewModel?.fetchNextPage()
   }
 }

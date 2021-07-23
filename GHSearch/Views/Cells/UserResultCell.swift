@@ -12,9 +12,9 @@ class UserResultCell: UICollectionViewCell {
   private lazy var userPhotoImageView: UIImageView = {
     let view = UIImageView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .systemRed
-    view.contentMode = .scaleAspectFit
+    view.contentMode = .scaleAspectFill
     view.layer.cornerRadius = 4
+    view.clipsToBounds = true
     return view
   }()
 
@@ -33,6 +33,14 @@ class UserResultCell: UICollectionViewCell {
     return view
   }()
 
+  var user: User? {
+    didSet {
+      guard let user = user else { return }
+      userNameLabel.text = user.login
+      userPhotoImageView.loadingImage(with: user.avatarUrl)
+    }
+  }
+
   // MARK: - Initialization
 
   override init(frame: CGRect) {
@@ -42,6 +50,11 @@ class UserResultCell: UICollectionViewCell {
 
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    userPhotoImageView.image = nil
   }
 
   // MARK: - Private Methods

@@ -70,6 +70,7 @@ class InputSearchKeyWordView: UIView {
 
 extension InputSearchKeyWordView: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
     delegate?.searchButtonDidPressed(with: textField.text ?? "")
     return true
   }

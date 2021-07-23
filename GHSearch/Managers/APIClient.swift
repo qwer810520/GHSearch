@@ -29,23 +29,15 @@ class APIClient: NSObject {
     return Alamofire.Session(configuration: corfiguration)
   }()
 
-  final func send<T: Decodable>(_ requestType: APIManager, completionHandler: @escaping (Swift.Result<T, Error>) -> Void) {
+  final func send<T: ResponseFormatter>(_ requestType: APIManager, completionHandler: @escaping (Swift.Result<T, Error>) -> Void) {
     alamoFireManager.request(requestType.urlStr, method: Alamofire.HTTPMethod(rawValue: requestType.method.rawValue), parameters: requestType.parameters, encoding: JSONEncoding.default, headers: HTTPHeaders(requestType.headers ?? [:])).responseData { response in
 
       switch response.result {
         case .success(let data):
-          #if DEBUG
-            print("reqponseInfo: \(String(data: data, encoding: .utf8) ?? "")")
-          #endif
           guard let statusCode = response.response?.statusCode else { return }
           switch statusCode {
             case 200:
-              do {
-                try completionHandler(.success(data.mapObject(T.self)))
-              } catch {
-                print(error.localizedDescription)
-                completionHandler(.failure(HTTPRequestErrorType.decodeFailure))
-              }
+              completionHandler(.success(T(header: response.response?.allHeaderFields ?? [:], data: data)))
             case 304:
               completionHandler(.failure(HTTPRequestErrorType.other("Not Modified")))
             case 422:
@@ -91,10 +83,8 @@ enum HTTPMethod: String {
   case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
 }
 
-  // MARK: - Data Extension
+  // MARK: - ResponseFormatter Protocol
 
-extension Data {
-  func mapObject<T: Decodable>(_ type: T.Type) throws -> T {
-    return try JSONDecoder().decode(T.self, from: self)
-  }
+protocol ResponseFormatter {
+  init(header: [AnyHashable: Any], data: Data)
 }
