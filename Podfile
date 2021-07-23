@@ -11,8 +11,8 @@ target 'GHSearch' do
 
   # Pods for GHSearch
   pod 'SwiftLint'
-  pod 'Alamofire'
-  pod 'Nuke'
+  pod 'Alamofire', '5.4.3'
+  pod 'Nuke', '9.5.0'
 
   target 'GHSearchTests' do
     inherit! :search_paths
